@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "checked": "2026-10-15",
   "places": [
     {
@@ -78,6 +78,63 @@
       "precision": "River area only · not pinned",
       "note": "York University identifies the river near Peterborough. No private cabin location is published here.",
       "access": "No public access established; do not use as a destination."
+    },
+    {
+      "id": "macdonald-house",
+      "name": "MacDonald House / Four Elms",
+      "area": "121 Centre Street, Thornhill",
+      "region": "Ontario",
+      "lat": 43.814733,
+      "lon": -79.428433,
+      "precision": "Approximate site",
+      "note": "Orientation point follows a documented heritage marker on the grounds, not the exact painting position.",
+      "access": "Check City of Vaughan visiting arrangements.",
+      "coordinate_source": "https://www.hmdb.org/m.asp?m=309281"
+    },
+    {
+      "id": "lismer-thornhill",
+      "name": "Lismer’s Thornhill home",
+      "area": "22 John Street, Thornhill",
+      "region": "Ontario",
+      "lat": null,
+      "lon": null,
+      "precision": "Address documented · not pinned",
+      "note": "The historical society identifies the address. Coordinates have not been verified.",
+      "access": "Historic residence; no public access established."
+    },
+    {
+      "id": "bathouse",
+      "name": "The Bathouse Recording Studio",
+      "area": "Bath, near Kingston",
+      "region": "Ontario",
+      "lat": 44.182778,
+      "lon": -76.776667,
+      "precision": "Community area only",
+      "note": "This marker represents the community of Bath, NOT the studio property or an entrance.",
+      "access": "Working recording studio; this community marker is not a visitor destination.",
+      "coordinate_source": "https://www.canadian1.net/maps/Ontario/Bath_Ontario_ON_Canada_map.html"
+    },
+    {
+      "id": "distortion",
+      "name": "Distortion Studios",
+      "area": "Ottawa · precise site pending",
+      "region": "Ontario",
+      "lat": null,
+      "lon": null,
+      "precision": "City only · not pinned",
+      "note": "The recording connection identifies Ottawa; no building-level location is assigned.",
+      "access": "Historic studio; no public access established."
+    },
+    {
+      "id": "don-valley",
+      "name": "Don Valley Sounds",
+      "area": "Markham · precise site pending",
+      "region": "Ontario",
+      "lat": null,
+      "lon": null,
+      "precision": "City only · not pinned",
+      "note": "The Songwriters Hall of Fame identifies Markham, not a street address.",
+      "access": "Historic studio; no public access established."
     }
   ],
   "sources": {
@@ -128,6 +185,42 @@
       "url": "https://www.library.yorku.ca/web/archives/whats-new/margaretlaurence/",
       "publisher": "Clara Thomas Archives, York University",
       "evidence": "The archives biography states that most of The Diviners was written at the Otonabee River cabin during summers 1971–73."
+    },
+    "thornhill": {
+      "title": "Thornhill Historical Society · The Group of Seven in Thornhill",
+      "url": "https://www.thornhillhistoric.org/discover/the-group-of-seven-in-thornhill",
+      "publisher": "Thornhill Historical Society",
+      "evidence": "Identifies The Tangled Garden at Four Elms in 1916 and My Garden, Thornhill at Lismer’s John Street home around 1916. Both artists became Group of Seven members."
+    },
+    "secret-path": {
+      "title": "Gord Downie · Secret Path",
+      "url": "https://gorddownie.com/pages/secret-path",
+      "publisher": "Gord Downie official website",
+      "evidence": "Identifies recording sessions at the Bathouse in Bath during November and December 2013."
+    },
+    "away-mine": {
+      "title": "Gord Downie · Away Is Mine",
+      "url": "https://gorddownie.com/pages/away-is-mine",
+      "publisher": "Gord Downie official website",
+      "evidence": "Describes Bathouse sessions beginning 17 July 2017 with Josh Finlayson and Nyles Spencer."
+    },
+    "man-machine": {
+      "title": "Universal Music Canada · Man Machine Poem announcement",
+      "url": "https://www.universalmusic.ca/2016/04/08/tragically-hip-release-man-machine-poem-june-17/",
+      "publisher": "Universal Music Canada",
+      "evidence": "Identifies the Bathouse recording location, producers Kevin Drew and Dave Hamelin, and Gord Downie as the band’s vocalist and guitarist. Announces release on 17 June 2016."
+    },
+    "alanis": {
+      "title": "Alanis · recording history (secondary source)",
+      "url": "https://en.wikipedia.org/wiki/Alanis_(album)",
+      "publisher": "Wikipedia, citing RPM magazine",
+      "evidence": "Identifies Distortion Studios, Ottawa, and September–December 1990 recording. The cited RPM issue dated 6 July 1991 could only be checked through indexed excerpts; the full scan was inaccessible. Original liner-note verification remains pending."
+    },
+    "backbone": {
+      "title": "Canadian Songwriters Hall of Fame · Let Your Backbone Slide (French)",
+      "url": "https://www.cshf.ca/fr/song/let-your-backbone-slide/",
+      "publisher": "Canadian Songwriters Hall of Fame",
+      "evidence": "Identifies production at Don Valley Sounds in Markham by Anthony and Peter Davis, and the single’s 1989 album context."
     }
   },
   "works": [
@@ -270,6 +363,143 @@
       "description": "A cabin beside the Otonabee River became a working retreat. York University’s archives identify it as the place where Laurence wrote most of The Diviners over three summers.",
       "aside": "The evidence supports a substantial part of the writing, not the entire novel or its first idea.",
       "checked": "2026-10-15"
+    },
+    {
+      "id": "tangled-garden",
+      "title": "The Tangled Garden",
+      "creator": "J. E. H. MacDonald",
+      "medium": "Visual art",
+      "place": "macdonald-house",
+      "year": 1916,
+      "date": "1916",
+      "stage": "Painted",
+      "source": "thornhill",
+      "description": "A garden in Thornhill became a landmark painting. The local historical society places its creation at MacDonald’s Four Elms home.",
+      "aside": "Created before the Group of Seven’s formation in 1920; attributed to MacDonald individually.",
+      "tags": [
+        "Group of Seven"
+      ],
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "my-garden",
+      "title": "My Garden, Thornhill",
+      "creator": "Arthur Lismer",
+      "medium": "Visual art",
+      "place": "lismer-thornhill",
+      "year": 1916,
+      "date": "Circa 1916",
+      "stage": "Painted",
+      "source": "thornhill",
+      "description": "Lismer’s own garden joins the atlas. The historical society identifies his John Street home as the painting’s creation site.",
+      "aside": "The date is approximate. This is an individual work by a future Group of Seven member.",
+      "tags": [
+        "Group of Seven"
+      ],
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "man-machine-poem",
+      "title": "Man Machine Poem",
+      "creator": "The Tragically Hip",
+      "medium": "Music",
+      "place": "bathouse",
+      "year": 2016,
+      "date": "Released June 2016 · session dates unspecified here",
+      "stage": "Recorded",
+      "source": "man-machine",
+      "description": "The Hip recorded this album at their Bathouse studio with Kevin Drew and Dave Hamelin producing.",
+      "aside": "The year is the release year, not a verified session date. This connection does not claim every song was written here.",
+      "tags": [
+        "Gord Downie"
+      ],
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "secret-path",
+      "title": "Secret Path",
+      "creator": "Gord Downie",
+      "medium": "Music",
+      "place": "bathouse",
+      "year": 2013,
+      "date": "November–December 2013",
+      "stage": "Recorded",
+      "source": "secret-path",
+      "description": "Downie’s songs about Chanie Wenjack were recorded at the Bathouse. The project remembers the Indigenous child who died while trying to return home after escaping a residential school.",
+      "aside": "This entry locates the album sessions, not Chanie Wenjack’s journey or Jeff Lemire’s illustration work.",
+      "tags": [],
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "away-is-mine",
+      "title": "Away Is Mine",
+      "creator": "Gord Downie",
+      "medium": "Music",
+      "place": "bathouse",
+      "year": 2017,
+      "date": "Sessions beginning 17 July 2017",
+      "stage": "Recorded",
+      "source": "away-mine",
+      "description": "Downie brought songs developed with Josh Finlayson to the Bathouse, working with engineer Nyles Spencer to shape the recordings.",
+      "aside": "The album’s later release is separate from these 2017 sessions. Writing began before the studio work.",
+      "tags": [],
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "alanis",
+      "title": "Alanis",
+      "creator": "Alanis Morissette",
+      "medium": "Music",
+      "place": "distortion",
+      "year": 1990,
+      "date": "September–December 1990 · secondary-source account",
+      "stage": "Recorded",
+      "source": "alanis",
+      "description": "Before Jagged Little Pill, Morissette recorded her debut album in Ottawa with Leslie Howe. The published recording history identifies Distortion Studios.",
+      "aside": "Secondary-source entry: original liner-note or full contemporary-report verification remains pending. The album was released in 1991.",
+      "tags": [],
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "backbone-slide",
+      "title": "Let Your Backbone Slide",
+      "creator": "Maestro Fresh Wes",
+      "medium": "Music",
+      "place": "don-valley",
+      "year": 1989,
+      "date": "1989 · release context; session dates unspecified",
+      "stage": "Produced",
+      "source": "backbone",
+      "description": "Maestro’s breakthrough connects to Markham. The Canadian Songwriters Hall of Fame locates production at Don Valley Sounds with Anthony and Peter Davis.",
+      "aside": "The source establishes production at the studio; it does not establish the song’s initial writing location.",
+      "tags": [],
+      "checked": "2026-10-15"
+    }
+  ],
+  "relationships": [
+    {
+      "a": "w:all-stage",
+      "b": "p:toronto-sound",
+      "label": "mixed at",
+      "source": "stage"
+    },
+    {
+      "a": "c:Gord Downie",
+      "b": "c:The Tragically Hip",
+      "label": "vocalist and guitarist in",
+      "source": "man-machine"
+    },
+    {
+      "a": "c:J. E. H. MacDonald",
+      "b": "c:Group of Seven",
+      "label": "member of",
+      "source": "thornhill"
+    },
+    {
+      "a": "c:Arthur Lismer",
+      "b": "c:Group of Seven",
+      "label": "member of",
+      "source": "thornhill"
     }
   ]
 }

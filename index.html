@@ -670,18 +670,18 @@ svg.leaflet-image-layer.leaflet-interactive path {
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 </style></head><body>
 <a class="skip" href="#explore">Skip to explorer</a><header class="topbar"><a href="#" class="brand" id="brand"><span class="logo" aria-hidden="true">✳</span> creativity map<span style="color:#8b958e;font-weight:normal">.</span></a><div class="topmeta"><span class="edition"><span class="dot"></span> TORONTO & BEYOND</span><button class="quiet" id="about">About the project ↗</button></div></header>
-<main><section class="intro"><div><div class="eyebrow">An atlas of creative beginnings · Preview edition 01</div><h1>Great works.<br><em>Real places.</em></h1><p>Discover the rooms, studios and unexpected places where<br class="desktop-break"> art, music and stories took shape.</p></div><div class="intro-side"><div class="stat"><strong>10</strong><span>Sourced works</span></div><div class="stat"><strong>7</strong><span>Places</span></div><div class="stat"><strong>3</strong><span>Creative worlds</span></div></div></section>
+<main><section class="intro"><div><div class="eyebrow">An atlas of creative beginnings · Preview edition 02</div><h1>Great works.<br><em>Real places.</em></h1><p>Discover the rooms, studios and unexpected places where<br class="desktop-break"> art, music and stories took shape.</p></div><div class="intro-side"><div class="stat"><strong id="work-total"></strong><span>Sourced works</span></div><div class="stat"><strong id="place-total"></strong><span>Places</span></div><div class="stat"><strong>3</strong><span>Creative worlds</span></div></div></section>
 <section id="explore" aria-label="Explore creative works"><div class="toolbar"><div class="tabs" role="tablist" aria-label="Explorer views"><button class="tab" id="tab-map" role="tab" aria-controls="map-view" aria-selected="true" data-view="map">⌖ &nbsp; Map</button><button class="tab" id="tab-connections" role="tab" aria-controls="connections-view" aria-selected="false" tabindex="-1" data-view="connections">⌘ &nbsp; Connections</button><button class="tab" id="tab-stories" role="tab" aria-controls="stories-view" aria-selected="false" tabindex="-1" data-view="stories">▤ &nbsp; Stories</button></div><div class="filters" aria-label="Creative medium"><button class="chip" aria-pressed="true" data-medium="All">All works</button><button class="chip" aria-pressed="false" data-medium="Music"><i style="--c:var(--music)"></i>Music</button><button class="chip" aria-pressed="false" data-medium="Literature"><i style="--c:var(--literature)"></i>Literature</button><button class="chip" aria-pressed="false" data-medium="Visual art"><i style="--c:var(--art)"></i>Visual art</button></div></div>
-<div class="workspace"><aside class="sidebar" aria-label="Work catalogue"><div class="searchbar"><label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Work, creator or place…" aria-label="Search works, creators or places"></label><div class="filterrow"><select id="region" aria-label="Area"><option value="All">Toronto + Ontario</option value="Toronto">Toronto only</option></select><select id="era" aria-label="Period"><option value="All">All periods</option><option value="early">Before 1950</option><option value="70s">1970s</option><option value="80s">1980s</option></select></div></div><div class="result-label"><span id="result-count" aria-live="polite"></span><button class="quiet" style="padding:0;font-size:10px" id="reset">Reset filters</button></div><div class="list" id="work-list"></div></aside>
+<div class="workspace"><aside class="sidebar" aria-label="Work catalogue"><div class="searchbar"><label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Work, creator or place…" aria-label="Search works, creators or places"></label><div class="filterrow"><select id="region" aria-label="Area"><option value="All">Toronto + Ontario</option value="Toronto">Toronto only</option></select><select id="era" aria-label="Period"><option value="All">All periods</option><option value="early">Before 1950</option><option value="70s">1970s</option><option value="80s">1980s</option><option value="90s">1990s</option><option value="modern">2000 onward</option></select></div></div><div class="result-label"><span id="result-count" aria-live="polite"></span><button class="quiet" style="padding:0;font-size:10px" id="reset">Reset filters</button></div><div class="list" id="work-list"></div></aside>
 <div class="surface"><div class="view" role="tabpanel" aria-labelledby="tab-map" id="map-view"><div id="map" aria-label="Map of approximate creative locations"></div><div class="map-label"><strong id="map-heading">Toronto & beyond</strong><span id="pin-count">Approximate positions · explore each source</span></div><div class="maperror" id="map-error" hidden>Background map unavailable. The catalogue and connection explorer still work.</div><div id="preview" class="preview-card"></div><button class="map-action" id="fit-map">↗ Show all places</button></div>
 <div class="view" role="tabpanel" aria-labelledby="tab-connections" id="connections-view" hidden><div class="graph-controls"><div><h2>Follow the creative thread.</h2><small>Select a node to explore its neighbourhood.</small></div><select id="hops" aria-label="Connection depth"><option value="1">1 degree</option><option value="2" selected>2 degrees</option><option value="3">3 degrees</option><option value="6">Up to 6 degrees</option></select></div><p class="graph-note" id="graph-focus"></p><div class="graph-wrap"><svg id="graph" viewBox="0 0 800 330" role="img" aria-label="Network of documented works, creators and places"></svg></div><div class="graph-legend"><span style="--c:#245d4c">Creator</span><span style="--c:#ad5838">Work</span><span style="--c:#6c8490">Place</span></div><div class="connect-box"><form id="connect-form" class="connect-form"><label>From<select id="from" aria-label="Start node"></select></label><label>To<select id="to" aria-label="Destination node"></select></label><button class="solid" type="submit">Find a path ↗</button></form><div id="path-output" class="path-output" aria-live="polite">Try Toronto Sound Studios → Massey Hall. Every step carries a source.</div></div></div>
 <div class="view stories-grid" role="tabpanel" aria-labelledby="tab-stories" id="stories-view" hidden></div></div></div>
-<div class="underbar"><span>Every connection has a source. Map positions are approximate.<br>City-only and river-area records appear in the catalogue without a pin.</span><button id="surprise">Find something unexpected ↗</button></div></section>
+<div class="underbar"><span>Every connection has a source. Map positions are approximate.<br>Records without verified coordinates remain available in the catalogue.</span><button id="surprise">Find something unexpected ↗</button></div></section>
 <footer class="footer"><span>CREATIVITY MAP &nbsp; / &nbsp; A Social Activity project</span><span>Small discoveries. Shared freely. &nbsp; <button class="quiet" id="method" style="padding:0;font-size:10px">Our method ↗</button></span></footer></main>
 <dialog id="story-dialog" aria-labelledby="dialog-title"><button class="modal-close" aria-label="Close story" id="close-story">×</button><div id="dialog-content"></div></dialog>
-<dialog id="about-dialog" aria-labelledby="about-title"><button class="modal-close" aria-label="Close about" id="close-about">×</button><div class="dialog-body about-body"><div class="eyebrow">A small, useful discovery</div><h2 id="about-title">Where was it made?</h2><p>Creativity Map connects creative works to the places where they took shape, starting in Toronto and reaching into Ontario. This is a working public-facing prototype, with ten sourced works.</p><h3>Evidence before a pin.</h3><p>Recording, writing, painting and live performance are different stages of creation. None automatically establishes where an idea first occurred. Each story says exactly what its source supports.</p><ul><li>Five locations have approximate orientation markers. Coordinates have not been independently surveyed or verified as entrances.</li><li>Two places have no marker because the evidence supports only a broader area.</li><li>A shared place or creator connects works; it does not prove that unrelated people met.</li><li>The network shows documented relationships within this starter collection. An absent path means “not in this collection”.</li></ul><h3>Made to be explored.</h3><p>Search and filter the catalogue, read a story, or follow a connection. Dates refer to the stage described, and provisional dates are labelled. Sources were checked on 15 October 2026.</p><p>Decorative patterns are original interface graphics, not reproductions of the artworks or album covers. There are no accounts, analytics or live AI calls. Background maps load from OpenStreetMap; opening a source takes you to that publisher’s site.</p><h3>A growing collection.</h3><p>This first edition reflects available research, not a ranking or a complete picture of Toronto’s creative communities. More media, creators and neighbourhoods can follow as evidence is checked.</p><button class="solid" id="download-data">Download catalogue (JSON) ↓</button><p class="copyright-note">Mapping © OpenStreetMap contributors · Map interface: Leaflet, BSD-2-Clause. Original prototype by SAC for Magnus.</p></div></dialog>
+<dialog id="about-dialog" aria-labelledby="about-title"><button class="modal-close" aria-label="Close about" id="close-about">×</button><div class="dialog-body about-body"><div class="eyebrow">A small, useful discovery</div><h2 id="about-title">Where was it made?</h2><p>Creativity Map connects creative works to the places where they took shape, starting in Toronto and reaching into Ontario. This is a working public-facing prototype, with <span id="about-work-total"></span> sourced works.</p><h3>Evidence before a pin.</h3><p>Recording, writing, painting and live performance are different stages of creation. None automatically establishes where an idea first occurred. Each story says exactly what its source supports.</p><ul><li><span id="pinned-total"></span> locations have approximate orientation markers. Coordinates have not been independently surveyed or verified as entrances.</li><li><span id="unpinned-total"></span> places have no marker because coordinates remain unverified or the evidence supports only a broader area.</li><li>A shared place or creator connects works; it does not prove that unrelated people met.</li><li>The network shows documented relationships within this starter collection. An absent path means “not in this collection”.</li></ul><h3>Made to be explored.</h3><p>Search and filter the catalogue, read a story, or follow a connection. Dates refer to the stage described, and provisional dates are labelled. Sources were checked on 15 October 2026.</p><p>Decorative patterns are original interface graphics, not reproductions of the artworks or album covers. There are no accounts, analytics or live AI calls. Background maps load from OpenStreetMap; opening a source takes you to that publisher’s site.</p><h3>A growing collection.</h3><p>This first edition reflects available research, not a ranking or a complete picture of Toronto’s creative communities. More media, creators and neighbourhoods can follow as evidence is checked.</p><button class="solid" id="download-data">Download catalogue (JSON) ↓</button><p class="copyright-note">Mapping © OpenStreetMap contributors · Map interface: Leaflet, BSD-2-Clause. Original prototype by SAC for Magnus.</p></div></dialog>
 <script id="catalogue-data" type="application/json">{
-  "version": "0.1.0",
+  "version": "0.2.0",
   "checked": "2026-10-15",
   "places": [
     {
@@ -760,6 +760,63 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "precision": "River area only · not pinned",
       "note": "York University identifies the river near Peterborough. No private cabin location is published here.",
       "access": "No public access established; do not use as a destination."
+    },
+    {
+      "id": "macdonald-house",
+      "name": "MacDonald House / Four Elms",
+      "area": "121 Centre Street, Thornhill",
+      "region": "Ontario",
+      "lat": 43.814733,
+      "lon": -79.428433,
+      "precision": "Approximate site",
+      "note": "Orientation point follows a documented heritage marker on the grounds, not the exact painting position.",
+      "access": "Check City of Vaughan visiting arrangements.",
+      "coordinate_source": "https://www.hmdb.org/m.asp?m=309281"
+    },
+    {
+      "id": "lismer-thornhill",
+      "name": "Lismer’s Thornhill home",
+      "area": "22 John Street, Thornhill",
+      "region": "Ontario",
+      "lat": null,
+      "lon": null,
+      "precision": "Address documented · not pinned",
+      "note": "The historical society identifies the address. Coordinates have not been verified.",
+      "access": "Historic residence; no public access established."
+    },
+    {
+      "id": "bathouse",
+      "name": "The Bathouse Recording Studio",
+      "area": "Bath, near Kingston",
+      "region": "Ontario",
+      "lat": 44.182778,
+      "lon": -76.776667,
+      "precision": "Community area only",
+      "note": "This marker represents the community of Bath, NOT the studio property or an entrance.",
+      "access": "Working recording studio; this community marker is not a visitor destination.",
+      "coordinate_source": "https://www.canadian1.net/maps/Ontario/Bath_Ontario_ON_Canada_map.html"
+    },
+    {
+      "id": "distortion",
+      "name": "Distortion Studios",
+      "area": "Ottawa · precise site pending",
+      "region": "Ontario",
+      "lat": null,
+      "lon": null,
+      "precision": "City only · not pinned",
+      "note": "The recording connection identifies Ottawa; no building-level location is assigned.",
+      "access": "Historic studio; no public access established."
+    },
+    {
+      "id": "don-valley",
+      "name": "Don Valley Sounds",
+      "area": "Markham · precise site pending",
+      "region": "Ontario",
+      "lat": null,
+      "lon": null,
+      "precision": "City only · not pinned",
+      "note": "The Songwriters Hall of Fame identifies Markham, not a street address.",
+      "access": "Historic studio; no public access established."
     }
   ],
   "sources": {
@@ -810,6 +867,42 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "url": "https://www.library.yorku.ca/web/archives/whats-new/margaretlaurence/",
       "publisher": "Clara Thomas Archives, York University",
       "evidence": "The archives biography states that most of The Diviners was written at the Otonabee River cabin during summers 1971–73."
+    },
+    "thornhill": {
+      "title": "Thornhill Historical Society · The Group of Seven in Thornhill",
+      "url": "https://www.thornhillhistoric.org/discover/the-group-of-seven-in-thornhill",
+      "publisher": "Thornhill Historical Society",
+      "evidence": "Identifies The Tangled Garden at Four Elms in 1916 and My Garden, Thornhill at Lismer’s John Street home around 1916. Both artists became Group of Seven members."
+    },
+    "secret-path": {
+      "title": "Gord Downie · Secret Path",
+      "url": "https://gorddownie.com/pages/secret-path",
+      "publisher": "Gord Downie official website",
+      "evidence": "Identifies recording sessions at the Bathouse in Bath during November and December 2013."
+    },
+    "away-mine": {
+      "title": "Gord Downie · Away Is Mine",
+      "url": "https://gorddownie.com/pages/away-is-mine",
+      "publisher": "Gord Downie official website",
+      "evidence": "Describes Bathouse sessions beginning 17 July 2017 with Josh Finlayson and Nyles Spencer."
+    },
+    "man-machine": {
+      "title": "Universal Music Canada · Man Machine Poem announcement",
+      "url": "https://www.universalmusic.ca/2016/04/08/tragically-hip-release-man-machine-poem-june-17/",
+      "publisher": "Universal Music Canada",
+      "evidence": "Identifies the Bathouse recording location, producers Kevin Drew and Dave Hamelin, and Gord Downie as the band’s vocalist and guitarist. Announces release on 17 June 2016."
+    },
+    "alanis": {
+      "title": "Alanis · recording history (secondary source)",
+      "url": "https://en.wikipedia.org/wiki/Alanis_(album)",
+      "publisher": "Wikipedia, citing RPM magazine",
+      "evidence": "Identifies Distortion Studios, Ottawa, and September–December 1990 recording. The cited RPM issue dated 6 July 1991 could only be checked through indexed excerpts; the full scan was inaccessible. Original liner-note verification remains pending."
+    },
+    "backbone": {
+      "title": "Canadian Songwriters Hall of Fame · Let Your Backbone Slide (French)",
+      "url": "https://www.cshf.ca/fr/song/let-your-backbone-slide/",
+      "publisher": "Canadian Songwriters Hall of Fame",
+      "evidence": "Identifies production at Don Valley Sounds in Markham by Anthony and Peter Davis, and the single’s 1989 album context."
     }
   },
   "works": [
@@ -952,9 +1045,147 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "description": "A cabin beside the Otonabee River became a working retreat. York University’s archives identify it as the place where Laurence wrote most of The Diviners over three summers.",
       "aside": "The evidence supports a substantial part of the writing, not the entire novel or its first idea.",
       "checked": "2026-10-15"
+    },
+    {
+      "id": "tangled-garden",
+      "title": "The Tangled Garden",
+      "creator": "J. E. H. MacDonald",
+      "medium": "Visual art",
+      "place": "macdonald-house",
+      "year": 1916,
+      "date": "1916",
+      "stage": "Painted",
+      "source": "thornhill",
+      "description": "A garden in Thornhill became a landmark painting. The local historical society places its creation at MacDonald’s Four Elms home.",
+      "aside": "Created before the Group of Seven’s formation in 1920; attributed to MacDonald individually.",
+      "tags": [
+        "Group of Seven"
+      ],
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "my-garden",
+      "title": "My Garden, Thornhill",
+      "creator": "Arthur Lismer",
+      "medium": "Visual art",
+      "place": "lismer-thornhill",
+      "year": 1916,
+      "date": "Circa 1916",
+      "stage": "Painted",
+      "source": "thornhill",
+      "description": "Lismer’s own garden joins the atlas. The historical society identifies his John Street home as the painting’s creation site.",
+      "aside": "The date is approximate. This is an individual work by a future Group of Seven member.",
+      "tags": [
+        "Group of Seven"
+      ],
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "man-machine-poem",
+      "title": "Man Machine Poem",
+      "creator": "The Tragically Hip",
+      "medium": "Music",
+      "place": "bathouse",
+      "year": 2016,
+      "date": "Released June 2016 · session dates unspecified here",
+      "stage": "Recorded",
+      "source": "man-machine",
+      "description": "The Hip recorded this album at their Bathouse studio with Kevin Drew and Dave Hamelin producing.",
+      "aside": "The year is the release year, not a verified session date. This connection does not claim every song was written here.",
+      "tags": [
+        "Gord Downie"
+      ],
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "secret-path",
+      "title": "Secret Path",
+      "creator": "Gord Downie",
+      "medium": "Music",
+      "place": "bathouse",
+      "year": 2013,
+      "date": "November–December 2013",
+      "stage": "Recorded",
+      "source": "secret-path",
+      "description": "Downie’s songs about Chanie Wenjack were recorded at the Bathouse. The project remembers the Indigenous child who died while trying to return home after escaping a residential school.",
+      "aside": "This entry locates the album sessions, not Chanie Wenjack’s journey or Jeff Lemire’s illustration work.",
+      "tags": [],
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "away-is-mine",
+      "title": "Away Is Mine",
+      "creator": "Gord Downie",
+      "medium": "Music",
+      "place": "bathouse",
+      "year": 2017,
+      "date": "Sessions beginning 17 July 2017",
+      "stage": "Recorded",
+      "source": "away-mine",
+      "description": "Downie brought songs developed with Josh Finlayson to the Bathouse, working with engineer Nyles Spencer to shape the recordings.",
+      "aside": "The album’s later release is separate from these 2017 sessions. Writing began before the studio work.",
+      "tags": [],
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "alanis",
+      "title": "Alanis",
+      "creator": "Alanis Morissette",
+      "medium": "Music",
+      "place": "distortion",
+      "year": 1990,
+      "date": "September–December 1990 · secondary-source account",
+      "stage": "Recorded",
+      "source": "alanis",
+      "description": "Before Jagged Little Pill, Morissette recorded her debut album in Ottawa with Leslie Howe. The published recording history identifies Distortion Studios.",
+      "aside": "Secondary-source entry: original liner-note or full contemporary-report verification remains pending. The album was released in 1991.",
+      "tags": [],
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "backbone-slide",
+      "title": "Let Your Backbone Slide",
+      "creator": "Maestro Fresh Wes",
+      "medium": "Music",
+      "place": "don-valley",
+      "year": 1989,
+      "date": "1989 · release context; session dates unspecified",
+      "stage": "Produced",
+      "source": "backbone",
+      "description": "Maestro’s breakthrough connects to Markham. The Canadian Songwriters Hall of Fame locates production at Don Valley Sounds with Anthony and Peter Davis.",
+      "aside": "The source establishes production at the studio; it does not establish the song’s initial writing location.",
+      "tags": [],
+      "checked": "2026-10-15"
+    }
+  ],
+  "relationships": [
+    {
+      "a": "w:all-stage",
+      "b": "p:toronto-sound",
+      "label": "mixed at",
+      "source": "stage"
+    },
+    {
+      "a": "c:Gord Downie",
+      "b": "c:The Tragically Hip",
+      "label": "vocalist and guitarist in",
+      "source": "man-machine"
+    },
+    {
+      "a": "c:J. E. H. MacDonald",
+      "b": "c:Group of Seven",
+      "label": "member of",
+      "source": "thornhill"
+    },
+    {
+      "a": "c:Arthur Lismer",
+      "b": "c:Group of Seven",
+      "label": "member of",
+      "source": "thornhill"
     }
   ]
-}</script><script>/* @preserve
+}
+</script><script>/* @preserve
  * Leaflet 1.9.4, a JS library for interactive maps. https://leafletjs.com
  * (c) 2010-2023 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
@@ -964,12 +1195,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
 const DATA=JSON.parse(document.getElementById('catalogue-data').textContent);
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+$('#work-total').textContent=$('#about-work-total').textContent=DATA.works.length;$('#place-total').textContent=DATA.places.length;$('#pinned-total').textContent=DATA.places.filter(p=>p.lat!==null).length;$('#unpinned-total').textContent=DATA.places.filter(p=>p.lat===null).length;
 const places=Object.fromEntries(DATA.places.map(p=>[p.id,p]));
 const palette={'Music':['#ad5838','#f0dfd3','♪'],'Literature':['#426b90','#dce7e8','Aa'],'Visual art':['#81648e','#e6dfeb','◒']};
 let state={view:'map',medium:'All',selected:'trinity-session',focus:'w:trinity-session'},map,markers={},rings=[],highlightPath=[];
 const colours=w=>`--c:${palette[w.medium][0]};--tint:${palette[w.medium][1]}`;
 const current=()=>DATA.works.find(w=>w.id===state.selected);
-function filtered(){const q=$('#search').value.toLowerCase().trim(),region=$('#region').value,era=$('#era').value;return DATA.works.filter(w=>{const p=places[w.place];return(state.medium==='All'||w.medium===state.medium)&&(region==='All'||p.region===region)&&(era==='All'||(era==='early'&&w.year<1950)||(era==='70s'&&w.year>=1970&&w.year<1980)||(era==='80s'&&w.year>=1980&&w.year<1990))&&`${w.title} ${w.creator} ${p.name} ${p.area}`.toLowerCase().includes(q)})}
+function filtered(){const q=$('#search').value.toLowerCase().trim(),region=$('#region').value,era=$('#era').value;return DATA.works.filter(w=>{const p=places[w.place];return(state.medium==='All'||w.medium===state.medium)&&(region==='All'||p.region===region)&&(era==='All'||(era==='early'&&w.year<1950)||(era==='70s'&&w.year>=1970&&w.year<1980)||(era==='80s'&&w.year>=1980&&w.year<1990)||(era==='90s'&&w.year>=1990&&w.year<2000)||(era==='modern'&&w.year>=2000))&&`${w.title} ${w.creator} ${p.name} ${p.area} ${(w.tags||[]).join(" ")}`.toLowerCase().includes(q)})}
 function art(w,extra=''){return `<div class="miniart ${extra}" style="${colours(w)}" aria-hidden="true"><span class="yearmark">${w.year}</span><span class="artlabel">${esc(w.medium)}</span><div class="rings"></div></div>`}
 function row(w){return `<button class="workrow ${state.selected===w.id?'active':''}" data-work="${w.id}" aria-pressed="${state.selected===w.id}" style="${colours(w)}"><span class="thumb" aria-hidden="true">${palette[w.medium][2]}</span><span class="row-copy"><span class="mediumline">${esc(w.stage)} · ${w.year}</span><strong>${esc(w.title)}</strong><small>${esc(w.creator)}</small></span><span class="row-arrow" aria-hidden="true">↗</span></button>`}
 function render(){const list=filtered();if(!list.some(w=>w.id===state.selected))state.selected=list[0]?.id||null;$('#result-count').textContent=`${list.length} WORK${list.length===1?'':'S'} TO EXPLORE`;$('#work-list').innerHTML=list.length?list.map(row).join(''):'<div class="empty">No works match yet.<br>Try another search or reset the filters.</div>';$('#stories-view').innerHTML=list.length?list.map(w=>`<button class="storytile" data-story="${w.id}">${art(w)}<div class="previewbody"><span class="eyebrow small">${esc(places[w.place].area)}</span><h2>${esc(w.title)}</h2><p>${esc(w.creator)} · ${esc(w.stage)}</p><span class="textbutton">Read the story ↗</span></div></button>`).join(''):'<div class="empty">No matching stories. Reset the filters to explore the collection.</div>';renderPreview();renderMarkers();if(state.view==='connections')renderGraph();}
@@ -978,12 +1210,12 @@ function selectWork(id,focusMap=true){state.selected=id;state.focus='w:'+id;high
 function setView(view){state.view=view;$$('.tab').forEach(t=>{t.setAttribute('aria-selected',String(t.dataset.view===view));t.tabIndex=t.dataset.view===view?0:-1});['map','connections','stories'].forEach(v=>$('#'+v+'-view').hidden=v!==view);if(view==='map'&&map){map.invalidateSize();}if(view==='connections')renderGraph();}
 function renderMarkers(){if(!map)return;Object.values(markers).forEach(m=>m.remove());rings.forEach(r=>r.remove());markers={};rings=[];const groups={};filtered().forEach(w=>{if(places[w.place].lat!==null)(groups[w.place]??=[]).push(w)});for(const [id,ws]of Object.entries(groups)){const p=places[id],selected=ws.some(w=>w.id===state.selected),color=palette[ws[0].medium][0];const icon=L.divIcon({className:'',html:`<div class="pin ${selected?'selected':''}" style="--c:${color}"><span>${ws.length>1?ws.length:palette[ws[0].medium][2]}</span></div>`,iconSize:[36,36],iconAnchor:[18,32]});const m=L.marker([p.lat,p.lon],{icon,title:p.name+' — '+p.precision,keyboard:true}).addTo(map);m.bindTooltip(esc(p.name)+' · '+esc(p.precision),{direction:'top',offset:[0,-24]});m.on('click',()=>{selectWork(ws[0].id,false);if(ws.length>1){m.bindPopup(`<strong>${esc(p.name)}</strong><p>${esc(p.precision)}</p>${ws.map(w=>`<button class="textbutton" data-story="${w.id}" style="display:block">${esc(w.title)} ↗</button>`).join('')}`).openPopup()}});markers[id]=m;if(!p.precision.startsWith('Approximate'))rings.push(L.circle([p.lat,p.lon],{radius:900,color,weight:1,dashArray:'4 5',fillOpacity:.04,interactive:false}).addTo(map));}$('#pin-count').textContent=`${Object.keys(groups).length} approximate map positions · sources in each story`;}
 function fitMap(){if(!map)return;const points=Object.keys(markers).map(id=>[places[id].lat,places[id].lon]);if(points.length)map.fitBounds(points,{padding:[65,65],maxZoom:13,animate:false});$('#map-heading').textContent=$('#region').value==='Toronto'?'Toronto':'Toronto & beyond';}
-function openStory(id){const w=DATA.works.find(w=>w.id===id),p=places[w.place],s=DATA.sources[w.source];$('#dialog-content').innerHTML=`${art(w,'dialog-art')}<div class="dialog-body"><div class="eyebrow">${esc(w.medium)} · ${esc(w.stage)}</div><h2 id="dialog-title">${esc(w.title)}</h2><div class="byline">${esc(w.creator)}</div><p class="storytext">${esc(w.description)}</p><dl class="facts"><div><dt>Creation place</dt><dd>${esc(p.name)}<br>${esc(p.area)}</dd></div><div><dt>When</dt><dd>${esc(w.date)}</dd></div><div><dt>Location precision</dt><dd>${esc(p.precision)}</dd></div><div><dt>Before a visit</dt><dd>${esc(p.access)}</dd></div></dl><p class="note">${esc(p.note)}</p><p class="note">${esc(w.aside)}</p><div class="evidence"><strong>Follow the evidence</strong>${esc(s.evidence)}<br><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a><br><span style="color:var(--muted)">Source checked ${w.checked}</span></div><div class="dialog-actions"><button class="solid" data-go="connections" data-id="${w.id}">Explore connections ↗</button><button class="chip" data-go="map" data-id="${w.id}">${p.lat===null?'Return to map':'Find on map'} ⌖</button></div><p class="copyright-note">Decorative graphic, not the original work.</p></div>`;$('#story-dialog').showModal();}
+function openStory(id){const w=DATA.works.find(w=>w.id===id),p=places[w.place],s=DATA.sources[w.source];$('#dialog-content').innerHTML=`${art(w,'dialog-art')}<div class="dialog-body"><div class="eyebrow">${esc(w.medium)} · ${esc(w.stage)}</div><h2 id="dialog-title">${esc(w.title)}</h2><div class="byline">${esc(w.creator)}</div><p class="storytext">${esc(w.description)}</p><dl class="facts"><div><dt>Creation place</dt><dd>${esc(p.name)}<br>${esc(p.area)}</dd></div><div><dt>When</dt><dd>${esc(w.date)}</dd></div><div><dt>Location precision</dt><dd>${esc(p.precision)}</dd></div><div><dt>Before a visit</dt><dd>${esc(p.access)}</dd></div></dl><p class="note">${esc(p.note)}</p><p class="note">${esc(w.aside)}</p>${p.coordinate_source?`<p class="note"><a href="${esc(p.coordinate_source)}" target="_blank" rel="noopener noreferrer">Map-position source ↗</a></p>`:""}<div class="evidence"><strong>Follow the evidence</strong>${esc(s.evidence)}<br><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a><br><span style="color:var(--muted)">Source checked ${w.checked}</span></div><div class="dialog-actions"><button class="solid" data-go="connections" data-id="${w.id}">Explore connections ↗</button><button class="chip" data-go="map" data-id="${w.id}">${p.lat===null?'Return to map':'Find on map'} ⌖</button></div><p class="copyright-note">Decorative graphic, not the original work.</p></div>`;$('#story-dialog').showModal();}
 const nodes=[],edges=[];
 function addNode(id,label,type){if(!nodes.some(n=>n.id===id))nodes.push({id,label,type})}
 DATA.works.forEach(w=>{addNode('w:'+w.id,w.title,'Work');addNode('c:'+w.creator,w.creator,'Creator');addNode('p:'+w.place,places[w.place].name,'Place');edges.push({a:'c:'+w.creator,b:'w:'+w.id,label:'created',source:w.source});edges.push({a:'w:'+w.id,b:'p:'+w.place,label:w.stage.toLowerCase()+' at',source:w.source});});
-edges.push({a:'w:all-stage',b:'p:toronto-sound',label:'mixed at',source:'stage'});
-function visibleGraph(){const allowed=new Set();filtered().forEach(w=>{allowed.add('w:'+w.id);allowed.add('c:'+w.creator);allowed.add('p:'+w.place)});return{nodes:nodes.filter(n=>allowed.has(n.id)),edges:edges.filter(e=>allowed.has(e.a)&&allowed.has(e.b))}}
+for(const e of DATA.relationships||[]){for(const id of [e.a,e.b])if(id.startsWith('c:'))addNode(id,id.slice(2),'Creator');edges.push(e);}
+function visibleGraph(){const allowed=new Set();filtered().forEach(w=>{allowed.add('w:'+w.id);allowed.add('c:'+w.creator);allowed.add('p:'+w.place)});for(const e of edges){if(e.label==='member of'&&allowed.has(e.a))allowed.add(e.b)}return{nodes:nodes.filter(n=>allowed.has(n.id)),edges:edges.filter(e=>allowed.has(e.a)&&allowed.has(e.b))}}
 function bfs(start,end,max=6,graph=visibleGraph()){const queue=[[start]],visited=new Set([start]);while(queue.length){const path=queue.shift(),last=path.at(-1);if(last===end)return path;if(path.length-1>=max)continue;for(const e of graph.edges){const next=e.a===last?e.b:e.b===last?e.a:null;if(next&&!visited.has(next)){visited.add(next);queue.push([...path,next])}}}return null;}
 function renderGraph(){const g=visibleGraph();if(!g.nodes.some(n=>n.id===state.focus))state.focus=g.nodes.find(n=>n.id==='w:'+state.selected)?.id||g.nodes[0]?.id;const focus=nodes.find(n=>n.id===state.focus);$('#graph-focus').textContent=focus?`Centred on ${focus.label} · ${$('#hops').value} degree${$('#hops').value==='1'?'':'s'} · current filters apply`:'No matching works. Reset filters to explore.';const depth=Number($('#hops').value);let shown=g.nodes.filter(n=>bfs(state.focus,n.id,depth,g));if(highlightPath.length)shown=g.nodes.filter(n=>highlightPath.includes(n.id));const nodeIds=new Set(shown.map(n=>n.id)),ge=g.edges.filter(e=>nodeIds.has(e.a)&&nodeIds.has(e.b));const pos={};if(focus)pos[focus.id]=[400,155];const others=shown.filter(n=>n.id!==state.focus);others.forEach((n,i)=>{const a=-Math.PI/2+(i*Math.PI*2/Math.max(1,others.length));pos[n.id]=[400+Math.cos(a)*280,155+Math.sin(a)*119]});if(highlightPath.length)highlightPath.forEach((id,i)=>pos[id]=[70+i*(660/Math.max(1,highlightPath.length-1)),155+(i%2?52:-35)]);
 $('#graph').innerHTML=ge.map(e=>{const a=pos[e.a],b=pos[e.b],selected=highlightPath.some((n,i)=>i&&((n===e.a&&highlightPath[i-1]===e.b)||(n===e.b&&highlightPath[i-1]===e.a)));return `<line class="edge ${selected?'selected':''}" x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}"><title>${esc(e.label)}</title></line>`}).join('')+shown.map(n=>{const [x,y]=pos[n.id],c={Creator:'#245d4c',Work:'#ad5838',Place:'#6c8490'}[n.type],label=n.label.length>25?n.label.slice(0,24)+'…':n.label;return `<g class="node" tabindex="0" role="button" aria-label="Explore ${esc(n.label)}" data-node="${esc(n.id)}" transform="translate(${x},${y})"><title>${esc(n.label)} · ${n.type}</title><circle r="${n.id===state.focus?18:11}" fill="${c}"/><text text-anchor="middle" y="${n.id===state.focus?37:29}">${esc(label)}</text></g>`}).join('');
