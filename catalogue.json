@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "checked": "2026-10-15",
   "places": [
     {
@@ -221,6 +221,36 @@
       "url": "https://www.cshf.ca/fr/song/let-your-backbone-slide/",
       "publisher": "Canadian Songwriters Hall of Fame",
       "evidence": "Identifies production at Don Valley Sounds in Markham by Anthony and Peter Davis, and the single’s 1989 album context."
+    },
+    "lismer-order": {
+      "title": "Arthur Lismer — Governor General",
+      "url": "https://www.gg.ca/en/honours/recipients/146-2658",
+      "evidence": "Companion of the Order of Canada, 1967.",
+      "checked": "2026-10-23"
+    },
+    "downie-order": {
+      "title": "Gord Downie — Governor General",
+      "url": "https://www.gg.ca/en/honours/recipients/146-7988",
+      "evidence": "Member of the Order of Canada, 2017.",
+      "checked": "2026-10-23"
+    },
+    "morrisseau-order": {
+      "title": "Norval Morrisseau — Governor General",
+      "url": "https://www.gg.ca/en/honours/recipients/146-13681",
+      "evidence": "Member of the Order of Canada, appointed in 1978; invested in 1979.",
+      "checked": "2026-10-23"
+    },
+    "first-order": {
+      "title": "First recipients — Governor General",
+      "url": "https://www.gg.ca/en/honours/canadian-honours/order-canada/first-recipients",
+      "evidence": "Kenojuak Ashevak and Alexander Colville are listed among the first recipients in 1967, at the original Medal of Service level.",
+      "checked": "2026-10-23"
+    },
+    "visual-2008": {
+      "title": "2008 visual and media arts awards — Canada Council",
+      "url": "https://www.canada.ca/en/news/archive/2008/03/governor-general-awards-visual-media-arts-announcement-winners.html",
+      "evidence": "Kenojuak Ashevak and Alex Janvier were named among the 2008 artistic achievement recipients.",
+      "checked": "2026-10-23"
     }
   },
   "works": [
@@ -500,6 +530,87 @@
       "b": "c:Group of Seven",
       "label": "member of",
       "source": "thornhill"
+    },
+    {
+      "a": "c:Arthur Lismer",
+      "b": "h:order-canada",
+      "label": "Companion · 1967",
+      "source": "lismer-order",
+      "checked": "2026-10-23"
+    },
+    {
+      "a": "c:Gord Downie",
+      "b": "h:order-canada",
+      "label": "Member · 2017",
+      "source": "downie-order",
+      "checked": "2026-10-23"
+    },
+    {
+      "a": "c:Norval Morrisseau",
+      "b": "h:order-canada",
+      "label": "Member · appointed 1978",
+      "source": "morrisseau-order",
+      "checked": "2026-10-23"
+    },
+    {
+      "a": "c:Kenojuak Ashevak",
+      "b": "h:order-canada",
+      "label": "Medal of Service · 1967",
+      "source": "first-order",
+      "checked": "2026-10-23"
+    },
+    {
+      "a": "c:Alex Colville",
+      "b": "h:order-canada",
+      "label": "Medal of Service · 1967",
+      "source": "first-order",
+      "checked": "2026-10-23"
+    },
+    {
+      "a": "c:Kenojuak Ashevak",
+      "b": "h:visual-2008",
+      "label": "artistic achievement · 2008",
+      "source": "visual-2008",
+      "checked": "2026-10-23"
+    },
+    {
+      "a": "c:Alex Janvier",
+      "b": "h:visual-2008",
+      "label": "artistic achievement · 2008",
+      "source": "visual-2008",
+      "checked": "2026-10-23"
+    }
+  ],
+  "people": [
+    {
+      "name": "Norval Morrisseau",
+      "medium": "Visual art",
+      "note": "Painter. His official citation recognizes art expressing his Ojibway heritage."
+    },
+    {
+      "name": "Kenojuak Ashevak",
+      "medium": "Visual art",
+      "note": "Artist recognized in the first Order of Canada cohort and the 2008 visual and media arts awards."
+    },
+    {
+      "name": "Alex Colville",
+      "medium": "Visual art",
+      "note": "Listed as Alexander Colville in the first Order of Canada cohort."
+    },
+    {
+      "name": "Alex Janvier",
+      "medium": "Visual art",
+      "note": "Recipient of a 2008 Governor General’s Award in Visual and Media Arts."
+    }
+  ],
+  "honours": [
+    {
+      "id": "h:order-canada",
+      "name": "Order of Canada"
+    },
+    {
+      "id": "h:visual-2008",
+      "name": "Visual & Media Arts Awards · 2008"
     }
   ]
 }

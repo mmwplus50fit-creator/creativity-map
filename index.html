@@ -668,20 +668,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
 @media(max-width:950px){main{padding:0 20px}.topbar{padding:19px 20px}.intro-side{gap:17px}.workspace{grid-template-columns:260px 1fr}.preview-card{width:235px;left:14px;bottom:30px}.previewbody h2{font-size:21px}.map-action{font-size:10px;padding:8px}.stories-grid{grid-template-columns:1fr}.graph-controls select{max-width:145px}.topmeta .edition{display:none}.intro{padding:27px 0}.intro p{font-size:13px}}
 @media(max-width:650px){main{padding:0 13px}.topbar{padding:15px 16px}.brand{font-size:17px}.logo{width:29px;height:29px;font-size:23px}.topmeta{gap:5px}.intro{padding:25px 2px 22px;align-items:flex-start}.intro h1{font-size:39px;letter-spacing:-1.4px}.intro p{font-size:12px;max-width:320px}.intro-side{display:none}.toolbar{gap:13px}.tabs{width:100%;justify-content:space-between}.tab{flex:1;padding:10px}.filters{width:100%;justify-content:space-between;gap:4px}.chip{font-size:11px;padding:8px 10px}.workspace{display:flex;flex-direction:column;border-radius:12px}.sidebar{border-right:0}.searchbar{padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:7px}.filterrow{margin:0}.filterrow select{font-size:10px}.result-label{padding:10px 14px 0}.list{display:flex;gap:7px;max-height:none;overflow:auto;padding:10px 12px 12px;scroll-snap-type:x mandatory}.workrow{min-width:220px;max-width:230px;border-color:var(--line);padding:9px;scroll-snap-align:start}.surface,.view,#map{min-height:490px}.surface{border-top:1px solid var(--line)}.preview-card{width:220px;bottom:29px;left:12px}.preview-card .miniart{height:57px;padding:10px 15px}.previewbody{padding:12px 15px}.previewbody h2{font-size:21px}.previewbody p{font-size:10px}.map-label{left:12px;top:12px;max-width:210px;padding:10px}.map-label strong{font-size:16px}.underbar{font-size:10px;gap:15px}.footer{font-size:9px}.dialog-body{padding:24px 23px}.dialog-body h2{font-size:31px}.facts{gap:15px}.stories-grid{max-height:650px;grid-template-columns:1fr 1fr;padding:12px;gap:10px}.storytile .miniart{height:90px}.storytile h2{font-size:21px}.storytile .previewbody{padding:12px}.graph-wrap{height:300px}#graph{height:300px}#connections-view{padding:14px}.connect-form{flex-direction:column;align-items:stretch}.connect-form label{display:grid;grid-template-columns:35px 1fr}.graph-controls h2{font-size:19px}.storytext{font-size:17px}.map-action{right:10px;bottom:30px}.empty{padding:12px}.intro .eyebrow{font-size:9px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Connection explorer: quiet constellation field, accessible focus and finite motion. */
+.graph-tools{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:11px}.graph-tools select{max-width:230px;padding:8px}.depth-control{font-size:11px;display:grid;gap:6px;min-width:180px}.depth-control input{width:100%;accent-color:var(--green)}.graph-wrap{height:440px;background:radial-gradient(ellipse at center,#243d43,#111e2b);border-radius:12px;overflow:auto}.node circle{stroke:#b7d8da55;stroke-width:1.5;fill-opacity:.8}.node text{font-size:12px;fill:#f6f6e8;stroke:#172632;stroke-width:4px;opacity:0;pointer-events:none}.node.focused text,.node:hover text,.node:focus text,.all-labels .node text{opacity:1}.edge{stroke:#9cb8c14d}.edge.selected{stroke:#e5c573;stroke-width:2.5}.node .focus-halo{fill:none;stroke:#f1db94;stroke-width:2;opacity:.8}.pulse{animation:node-pulse .75s ease-out 3}@keyframes node-pulse{0%{r:19;opacity:1}100%{r:35;opacity:0}}@media(prefers-reduced-motion:reduce){.pulse{animation:none}}.graph-legend{flex-wrap:wrap}.graph-tools .chip{font-size:11px}.graph-note{line-height:1.6}@media(max-width:600px){.graph-wrap{height:380px}.graph-tools label{max-width:100%}.graph-tools select{max-width:210px}}
 </style></head><body>
 <a class="skip" href="#explore">Skip to explorer</a><header class="topbar"><a href="#" class="brand" id="brand"><span class="logo" aria-hidden="true">✳</span> creativity map<span style="color:#8b958e;font-weight:normal">.</span></a><div class="topmeta"><span class="edition"><span class="dot"></span> TORONTO & BEYOND</span><button class="quiet" id="about">About the project ↗</button></div></header>
 <main><section class="intro"><div><div class="eyebrow">An atlas of creative beginnings · Preview edition 02</div><h1>Great works.<br><em>Real places.</em></h1><p>Discover the rooms, studios and unexpected places where<br class="desktop-break"> art, music and stories took shape.</p></div><div class="intro-side"><div class="stat"><strong id="work-total"></strong><span>Sourced works</span></div><div class="stat"><strong id="place-total"></strong><span>Places</span></div><div class="stat"><strong>3</strong><span>Creative worlds</span></div></div></section>
 <section id="explore" aria-label="Explore creative works"><div class="toolbar"><div class="tabs" role="tablist" aria-label="Explorer views"><button class="tab" id="tab-map" role="tab" aria-controls="map-view" aria-selected="true" data-view="map">⌖ &nbsp; Map</button><button class="tab" id="tab-connections" role="tab" aria-controls="connections-view" aria-selected="false" tabindex="-1" data-view="connections">⌘ &nbsp; Connections</button><button class="tab" id="tab-stories" role="tab" aria-controls="stories-view" aria-selected="false" tabindex="-1" data-view="stories">▤ &nbsp; Stories</button></div><div class="filters" aria-label="Creative medium"><button class="chip" aria-pressed="true" data-medium="All">All works</button><button class="chip" aria-pressed="false" data-medium="Music"><i style="--c:var(--music)"></i>Music</button><button class="chip" aria-pressed="false" data-medium="Literature"><i style="--c:var(--literature)"></i>Literature</button><button class="chip" aria-pressed="false" data-medium="Visual art"><i style="--c:var(--art)"></i>Visual art</button></div></div>
 <div class="workspace"><aside class="sidebar" aria-label="Work catalogue"><div class="searchbar"><label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Work, creator or place…" aria-label="Search works, creators or places"></label><div class="filterrow"><select id="region" aria-label="Area"><option value="All">Toronto + Ontario</option value="Toronto">Toronto only</option></select><select id="era" aria-label="Period"><option value="All">All periods</option><option value="early">Before 1950</option><option value="70s">1970s</option><option value="80s">1980s</option><option value="90s">1990s</option><option value="modern">2000 onward</option></select></div></div><div class="result-label"><span id="result-count" aria-live="polite"></span><button class="quiet" style="padding:0;font-size:10px" id="reset">Reset filters</button></div><div class="list" id="work-list"></div></aside>
 <div class="surface"><div class="view" role="tabpanel" aria-labelledby="tab-map" id="map-view"><div id="map" aria-label="Map of approximate creative locations"></div><div class="map-label"><strong id="map-heading">Toronto & beyond</strong><span id="pin-count">Approximate positions · explore each source</span></div><div class="maperror" id="map-error" hidden>Background map unavailable. The catalogue and connection explorer still work.</div><div id="preview" class="preview-card"></div><button class="map-action" id="fit-map">↗ Show all places</button></div>
-<div class="view" role="tabpanel" aria-labelledby="tab-connections" id="connections-view" hidden><div class="graph-controls"><div><h2>Follow the creative thread.</h2><small>Select a node to explore its neighbourhood.</small></div><select id="hops" aria-label="Connection depth"><option value="1">1 degree</option><option value="2" selected>2 degrees</option><option value="3">3 degrees</option><option value="6">Up to 6 degrees</option></select></div><p class="graph-note" id="graph-focus"></p><div class="graph-wrap"><svg id="graph" viewBox="0 0 800 330" role="img" aria-label="Network of documented works, creators and places"></svg></div><div class="graph-legend"><span style="--c:#245d4c">Creator</span><span style="--c:#ad5838">Work</span><span style="--c:#6c8490">Place</span></div><div class="connect-box"><form id="connect-form" class="connect-form"><label>From<select id="from" aria-label="Start node"></select></label><label>To<select id="to" aria-label="Destination node"></select></label><button class="solid" type="submit">Find a path ↗</button></form><div id="path-output" class="path-output" aria-live="polite">Try Toronto Sound Studios → Massey Hall. Every step carries a source.</div></div></div>
+<div class="view" role="tabpanel" aria-labelledby="tab-connections" id="connections-view" hidden><div class="graph-controls"><div><h2>Follow the creative thread.</h2><small>Select a node to explore its neighbourhood.</small></div><label class="depth-control">Connection depth <output id="depth-value">2</output><input id="hops" type="range" min="1" max="2" value="2" aria-label="Connection depth"></label></div><p class="graph-note" id="graph-focus" aria-live="polite"></p><div class="graph-tools"><label>Explore <select id="explore-node" aria-label="Explore a person, work, place or honour"></select></label><button id="all-links" class="chip">Expand all connections</button><button id="graph-home" class="chip">Reset connections</button><label><input type="checkbox" id="graph-labels"> All labels</label></div><div class="graph-wrap"><svg id="graph" viewBox="0 0 800 330" role="img" aria-label="Network of documented works, creators and places"></svg></div><div class="graph-legend"><span style="--c:#245d4c">Creator</span><span style="--c:#ad5838">Work</span><span style="--c:#6c8490">Place</span><span style="--c:#b38a39">Honour</span></div><p class="graph-note">Shared honours connect recipients, not personal acquaintances. New artist profiles appear here; map pins require separate place evidence.</p><div class="connect-box"><form id="connect-form" class="connect-form" autocomplete="off"><label>From<select id="from" aria-label="Start node"></select></label><label>To<select id="to" aria-label="Destination node"></select></label><button class="solid" type="submit">Find a path ↗</button></form><div id="path-output" class="path-output" aria-live="polite">Select a node to set From, then choose a destination. Paths search the full filtered network, regardless of slider depth.</div></div></div>
 <div class="view stories-grid" role="tabpanel" aria-labelledby="tab-stories" id="stories-view" hidden></div></div></div>
 <div class="underbar"><span>Every connection has a source. Map positions are approximate.<br>Records without verified coordinates remain available in the catalogue.</span><button id="surprise">Find something unexpected ↗</button></div></section>
 <footer class="footer"><span>CREATIVITY MAP &nbsp; / &nbsp; A Social Activity project</span><span>Small discoveries. Shared freely. &nbsp; <button class="quiet" id="method" style="padding:0;font-size:10px">Our method ↗</button></span></footer></main>
 <dialog id="story-dialog" aria-labelledby="dialog-title"><button class="modal-close" aria-label="Close story" id="close-story">×</button><div id="dialog-content"></div></dialog>
-<dialog id="about-dialog" aria-labelledby="about-title"><button class="modal-close" aria-label="Close about" id="close-about">×</button><div class="dialog-body about-body"><div class="eyebrow">A small, useful discovery</div><h2 id="about-title">Where was it made?</h2><p>Creativity Map connects creative works to the places where they took shape, starting in Toronto and reaching into Ontario. This is a working public-facing prototype, with <span id="about-work-total"></span> sourced works.</p><h3>Evidence before a pin.</h3><p>Recording, writing, painting and live performance are different stages of creation. None automatically establishes where an idea first occurred. Each story says exactly what its source supports.</p><ul><li><span id="pinned-total"></span> locations have approximate orientation markers. Coordinates have not been independently surveyed or verified as entrances.</li><li><span id="unpinned-total"></span> places have no marker because coordinates remain unverified or the evidence supports only a broader area.</li><li>A shared place or creator connects works; it does not prove that unrelated people met.</li><li>The network shows documented relationships within this starter collection. An absent path means “not in this collection”.</li></ul><h3>Made to be explored.</h3><p>Search and filter the catalogue, read a story, or follow a connection. Dates refer to the stage described, and provisional dates are labelled. Sources were checked on 15 October 2026.</p><p>Decorative patterns are original interface graphics, not reproductions of the artworks or album covers. There are no accounts, analytics or live AI calls. Background maps load from OpenStreetMap; opening a source takes you to that publisher’s site.</p><h3>A growing collection.</h3><p>This first edition reflects available research, not a ranking or a complete picture of Toronto’s creative communities. More media, creators and neighbourhoods can follow as evidence is checked.</p><button class="solid" id="download-data">Download catalogue (JSON) ↓</button><p class="copyright-note">Mapping © OpenStreetMap contributors · Map interface: Leaflet, BSD-2-Clause. Original prototype by SAC for Magnus.</p></div></dialog>
+<dialog id="about-dialog" aria-labelledby="about-title"><button class="modal-close" aria-label="Close about" id="close-about">×</button><div class="dialog-body about-body"><div class="eyebrow">A small, useful discovery</div><h2 id="about-title">Where was it made?</h2><p>Creativity Map connects creative works to the places where they took shape, starting in Toronto and reaching into Ontario. This is a working public-facing prototype, with <span id="about-work-total"></span> sourced works.</p><h3>Evidence before a pin.</h3><p>Recording, writing, painting and live performance are different stages of creation. None automatically establishes where an idea first occurred. Each story says exactly what its source supports.</p><ul><li><span id="pinned-total"></span> locations have approximate orientation markers. Coordinates have not been independently surveyed or verified as entrances.</li><li><span id="unpinned-total"></span> places have no marker because coordinates remain unverified or the evidence supports only a broader area.</li><li>A shared place or creator connects works; it does not prove that unrelated people met.</li><li>The network shows documented relationships within this starter collection. An absent path means “not in this collection”.</li></ul><h3>Made to be explored.</h3><p>Search and filter the catalogue, read a story, or follow a connection. Dates refer to the stage described, and provisional dates are labelled. Work sources were checked on 15 October 2026; the first honours expansion was checked on 23 October 2026. Dates and sources accompany each honours connection.</p><p>Decorative patterns are original interface graphics, not reproductions of the artworks or album covers. There are no accounts, analytics or live AI calls. Background maps load from OpenStreetMap; opening a source takes you to that publisher’s site.</p><h3>A growing collection.</h3><p>This first edition reflects available research, not a ranking or a complete picture of Toronto’s creative communities. More media, creators and neighbourhoods can follow as evidence is checked.</p><button class="solid" id="download-data">Download catalogue (JSON) ↓</button><p class="copyright-note">Mapping © OpenStreetMap contributors · Map interface: Leaflet, BSD-2-Clause. Original prototype by SAC for Magnus.</p></div></dialog>
 <script id="catalogue-data" type="application/json">{
-  "version": "0.2.0",
+  "version": "0.3.0",
   "checked": "2026-10-15",
   "places": [
     {
@@ -903,6 +906,36 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "url": "https://www.cshf.ca/fr/song/let-your-backbone-slide/",
       "publisher": "Canadian Songwriters Hall of Fame",
       "evidence": "Identifies production at Don Valley Sounds in Markham by Anthony and Peter Davis, and the single’s 1989 album context."
+    },
+    "lismer-order": {
+      "title": "Arthur Lismer — Governor General",
+      "url": "https://www.gg.ca/en/honours/recipients/146-2658",
+      "evidence": "Companion of the Order of Canada, 1967.",
+      "checked": "2026-10-23"
+    },
+    "downie-order": {
+      "title": "Gord Downie — Governor General",
+      "url": "https://www.gg.ca/en/honours/recipients/146-7988",
+      "evidence": "Member of the Order of Canada, 2017.",
+      "checked": "2026-10-23"
+    },
+    "morrisseau-order": {
+      "title": "Norval Morrisseau — Governor General",
+      "url": "https://www.gg.ca/en/honours/recipients/146-13681",
+      "evidence": "Member of the Order of Canada, appointed in 1978; invested in 1979.",
+      "checked": "2026-10-23"
+    },
+    "first-order": {
+      "title": "First recipients — Governor General",
+      "url": "https://www.gg.ca/en/honours/canadian-honours/order-canada/first-recipients",
+      "evidence": "Kenojuak Ashevak and Alexander Colville are listed among the first recipients in 1967, at the original Medal of Service level.",
+      "checked": "2026-10-23"
+    },
+    "visual-2008": {
+      "title": "2008 visual and media arts awards — Canada Council",
+      "url": "https://www.canada.ca/en/news/archive/2008/03/governor-general-awards-visual-media-arts-announcement-winners.html",
+      "evidence": "Kenojuak Ashevak and Alex Janvier were named among the 2008 artistic achievement recipients.",
+      "checked": "2026-10-23"
     }
   },
   "works": [
@@ -1182,6 +1215,87 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "b": "c:Group of Seven",
       "label": "member of",
       "source": "thornhill"
+    },
+    {
+      "a": "c:Arthur Lismer",
+      "b": "h:order-canada",
+      "label": "Companion · 1967",
+      "source": "lismer-order",
+      "checked": "2026-10-23"
+    },
+    {
+      "a": "c:Gord Downie",
+      "b": "h:order-canada",
+      "label": "Member · 2017",
+      "source": "downie-order",
+      "checked": "2026-10-23"
+    },
+    {
+      "a": "c:Norval Morrisseau",
+      "b": "h:order-canada",
+      "label": "Member · appointed 1978",
+      "source": "morrisseau-order",
+      "checked": "2026-10-23"
+    },
+    {
+      "a": "c:Kenojuak Ashevak",
+      "b": "h:order-canada",
+      "label": "Medal of Service · 1967",
+      "source": "first-order",
+      "checked": "2026-10-23"
+    },
+    {
+      "a": "c:Alex Colville",
+      "b": "h:order-canada",
+      "label": "Medal of Service · 1967",
+      "source": "first-order",
+      "checked": "2026-10-23"
+    },
+    {
+      "a": "c:Kenojuak Ashevak",
+      "b": "h:visual-2008",
+      "label": "artistic achievement · 2008",
+      "source": "visual-2008",
+      "checked": "2026-10-23"
+    },
+    {
+      "a": "c:Alex Janvier",
+      "b": "h:visual-2008",
+      "label": "artistic achievement · 2008",
+      "source": "visual-2008",
+      "checked": "2026-10-23"
+    }
+  ],
+  "people": [
+    {
+      "name": "Norval Morrisseau",
+      "medium": "Visual art",
+      "note": "Painter. His official citation recognizes art expressing his Ojibway heritage."
+    },
+    {
+      "name": "Kenojuak Ashevak",
+      "medium": "Visual art",
+      "note": "Artist recognized in the first Order of Canada cohort and the 2008 visual and media arts awards."
+    },
+    {
+      "name": "Alex Colville",
+      "medium": "Visual art",
+      "note": "Listed as Alexander Colville in the first Order of Canada cohort."
+    },
+    {
+      "name": "Alex Janvier",
+      "medium": "Visual art",
+      "note": "Recipient of a 2008 Governor General’s Award in Visual and Media Arts."
+    }
+  ],
+  "honours": [
+    {
+      "id": "h:order-canada",
+      "name": "Order of Canada"
+    },
+    {
+      "id": "h:visual-2008",
+      "name": "Visual & Media Arts Awards · 2008"
     }
   ]
 }
@@ -1198,6 +1312,7 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 $('#work-total').textContent=$('#about-work-total').textContent=DATA.works.length;$('#place-total').textContent=DATA.places.length;$('#pinned-total').textContent=DATA.places.filter(p=>p.lat!==null).length;$('#unpinned-total').textContent=DATA.places.filter(p=>p.lat===null).length;
 const places=Object.fromEntries(DATA.places.map(p=>[p.id,p]));
 const palette={'Music':['#ad5838','#f0dfd3','♪'],'Literature':['#426b90','#dce7e8','Aa'],'Visual art':['#81648e','#e6dfeb','◒']};
+let pathTo="", pathFrom="", pulseNext=false;
 let state={view:'map',medium:'All',selected:'trinity-session',focus:'w:trinity-session'},map,markers={},rings=[],highlightPath=[];
 const colours=w=>`--c:${palette[w.medium][0]};--tint:${palette[w.medium][1]}`;
 const current=()=>DATA.works.find(w=>w.id===state.selected);
@@ -1206,7 +1321,7 @@ function art(w,extra=''){return `<div class="miniart ${extra}" style="${colours(
 function row(w){return `<button class="workrow ${state.selected===w.id?'active':''}" data-work="${w.id}" aria-pressed="${state.selected===w.id}" style="${colours(w)}"><span class="thumb" aria-hidden="true">${palette[w.medium][2]}</span><span class="row-copy"><span class="mediumline">${esc(w.stage)} · ${w.year}</span><strong>${esc(w.title)}</strong><small>${esc(w.creator)}</small></span><span class="row-arrow" aria-hidden="true">↗</span></button>`}
 function render(){const list=filtered();if(!list.some(w=>w.id===state.selected))state.selected=list[0]?.id||null;$('#result-count').textContent=`${list.length} WORK${list.length===1?'':'S'} TO EXPLORE`;$('#work-list').innerHTML=list.length?list.map(row).join(''):'<div class="empty">No works match yet.<br>Try another search or reset the filters.</div>';$('#stories-view').innerHTML=list.length?list.map(w=>`<button class="storytile" data-story="${w.id}">${art(w)}<div class="previewbody"><span class="eyebrow small">${esc(places[w.place].area)}</span><h2>${esc(w.title)}</h2><p>${esc(w.creator)} · ${esc(w.stage)}</p><span class="textbutton">Read the story ↗</span></div></button>`).join(''):'<div class="empty">No matching stories. Reset the filters to explore the collection.</div>';renderPreview();renderMarkers();if(state.view==='connections')renderGraph();}
 function renderPreview(){const w=current();$('#preview').hidden=!w;if(!w)return;$('#preview').innerHTML=`${art(w)}<div class="previewbody"><span class="eyebrow small">${esc(w.stage)} here</span><h2>${esc(w.title)}</h2><p>${esc(w.creator)}<br>${esc(places[w.place].name)}</p><button class="textbutton" data-story="${w.id}">Read the story &nbsp; ↗</button></div>`;}
-function selectWork(id,focusMap=true){state.selected=id;state.focus='w:'+id;highlightPath=[];render();const p=places[current().place];if(map&&focusMap&&p.lat!==null){map.setView([p.lat,p.lon],p.precision.startsWith('Approximate')?14:12,{animate:false});$('#map-heading').textContent=p.area}else if(p.lat===null){$('#map-heading').textContent='No precise pin assigned';} }
+function selectWork(id,focusMap=true){state.selected=id;state.focus='w:'+id;clearPath();pulseNext=true;render();const p=places[current().place];if(map&&focusMap&&p.lat!==null){map.setView([p.lat,p.lon],p.precision.startsWith('Approximate')?14:12,{animate:false});$('#map-heading').textContent=p.area}else if(p.lat===null){$('#map-heading').textContent='No precise pin assigned';} }
 function setView(view){state.view=view;$$('.tab').forEach(t=>{t.setAttribute('aria-selected',String(t.dataset.view===view));t.tabIndex=t.dataset.view===view?0:-1});['map','connections','stories'].forEach(v=>$('#'+v+'-view').hidden=v!==view);if(view==='map'&&map){map.invalidateSize();}if(view==='connections')renderGraph();}
 function renderMarkers(){if(!map)return;Object.values(markers).forEach(m=>m.remove());rings.forEach(r=>r.remove());markers={};rings=[];const groups={};filtered().forEach(w=>{if(places[w.place].lat!==null)(groups[w.place]??=[]).push(w)});for(const [id,ws]of Object.entries(groups)){const p=places[id],selected=ws.some(w=>w.id===state.selected),color=palette[ws[0].medium][0];const icon=L.divIcon({className:'',html:`<div class="pin ${selected?'selected':''}" style="--c:${color}"><span>${ws.length>1?ws.length:palette[ws[0].medium][2]}</span></div>`,iconSize:[36,36],iconAnchor:[18,32]});const m=L.marker([p.lat,p.lon],{icon,title:p.name+' — '+p.precision,keyboard:true}).addTo(map);m.bindTooltip(esc(p.name)+' · '+esc(p.precision),{direction:'top',offset:[0,-24]});m.on('click',()=>{selectWork(ws[0].id,false);if(ws.length>1){m.bindPopup(`<strong>${esc(p.name)}</strong><p>${esc(p.precision)}</p>${ws.map(w=>`<button class="textbutton" data-story="${w.id}" style="display:block">${esc(w.title)} ↗</button>`).join('')}`).openPopup()}});markers[id]=m;if(!p.precision.startsWith('Approximate'))rings.push(L.circle([p.lat,p.lon],{radius:900,color,weight:1,dashArray:'4 5',fillOpacity:.04,interactive:false}).addTo(map));}$('#pin-count').textContent=`${Object.keys(groups).length} approximate map positions · sources in each story`;}
 function fitMap(){if(!map)return;const points=Object.keys(markers).map(id=>[places[id].lat,places[id].lon]);if(points.length)map.fitBounds(points,{padding:[65,65],maxZoom:13,animate:false});$('#map-heading').textContent=$('#region').value==='Toronto'?'Toronto':'Toronto & beyond';}
@@ -1215,23 +1330,53 @@ const nodes=[],edges=[];
 function addNode(id,label,type){if(!nodes.some(n=>n.id===id))nodes.push({id,label,type})}
 DATA.works.forEach(w=>{addNode('w:'+w.id,w.title,'Work');addNode('c:'+w.creator,w.creator,'Creator');addNode('p:'+w.place,places[w.place].name,'Place');edges.push({a:'c:'+w.creator,b:'w:'+w.id,label:'created',source:w.source});edges.push({a:'w:'+w.id,b:'p:'+w.place,label:w.stage.toLowerCase()+' at',source:w.source});});
 for(const e of DATA.relationships||[]){for(const id of [e.a,e.b])if(id.startsWith('c:'))addNode(id,id.slice(2),'Creator');edges.push(e);}
-function visibleGraph(){const allowed=new Set();filtered().forEach(w=>{allowed.add('w:'+w.id);allowed.add('c:'+w.creator);allowed.add('p:'+w.place)});for(const e of edges){if(e.label==='member of'&&allowed.has(e.a))allowed.add(e.b)}return{nodes:nodes.filter(n=>allowed.has(n.id)),edges:edges.filter(e=>allowed.has(e.a)&&allowed.has(e.b))}}
-function bfs(start,end,max=6,graph=visibleGraph()){const queue=[[start]],visited=new Set([start]);while(queue.length){const path=queue.shift(),last=path.at(-1);if(last===end)return path;if(path.length-1>=max)continue;for(const e of graph.edges){const next=e.a===last?e.b:e.b===last?e.a:null;if(next&&!visited.has(next)){visited.add(next);queue.push([...path,next])}}}return null;}
-function renderGraph(){const g=visibleGraph();if(!g.nodes.some(n=>n.id===state.focus))state.focus=g.nodes.find(n=>n.id==='w:'+state.selected)?.id||g.nodes[0]?.id;const focus=nodes.find(n=>n.id===state.focus);$('#graph-focus').textContent=focus?`Centred on ${focus.label} · ${$('#hops').value} degree${$('#hops').value==='1'?'':'s'} · current filters apply`:'No matching works. Reset filters to explore.';const depth=Number($('#hops').value);let shown=g.nodes.filter(n=>bfs(state.focus,n.id,depth,g));if(highlightPath.length)shown=g.nodes.filter(n=>highlightPath.includes(n.id));const nodeIds=new Set(shown.map(n=>n.id)),ge=g.edges.filter(e=>nodeIds.has(e.a)&&nodeIds.has(e.b));const pos={};if(focus)pos[focus.id]=[400,155];const others=shown.filter(n=>n.id!==state.focus);others.forEach((n,i)=>{const a=-Math.PI/2+(i*Math.PI*2/Math.max(1,others.length));pos[n.id]=[400+Math.cos(a)*280,155+Math.sin(a)*119]});if(highlightPath.length)highlightPath.forEach((id,i)=>pos[id]=[70+i*(660/Math.max(1,highlightPath.length-1)),155+(i%2?52:-35)]);
-$('#graph').innerHTML=ge.map(e=>{const a=pos[e.a],b=pos[e.b],selected=highlightPath.some((n,i)=>i&&((n===e.a&&highlightPath[i-1]===e.b)||(n===e.b&&highlightPath[i-1]===e.a)));return `<line class="edge ${selected?'selected':''}" x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}"><title>${esc(e.label)}</title></line>`}).join('')+shown.map(n=>{const [x,y]=pos[n.id],c={Creator:'#245d4c',Work:'#ad5838',Place:'#6c8490'}[n.type],label=n.label.length>25?n.label.slice(0,24)+'…':n.label;return `<g class="node" tabindex="0" role="button" aria-label="Explore ${esc(n.label)}" data-node="${esc(n.id)}" transform="translate(${x},${y})"><title>${esc(n.label)} · ${n.type}</title><circle r="${n.id===state.focus?18:11}" fill="${c}"/><text text-anchor="middle" y="${n.id===state.focus?37:29}">${esc(label)}</text></g>`}).join('');
-for(const id of ['from','to']){const prev=$('#'+id).value;$('#'+id).innerHTML=g.nodes.map(n=>`<option value="${esc(n.id)}">${esc(n.label)} · ${n.type}</option>`).join('');if(g.nodes.some(n=>n.id===prev))$('#'+id).value=prev;else $('#'+id).value=g.nodes.find(n=>n.id===(id==='from'?'p:toronto-sound':'p:massey'))?.id||g.nodes[0]?.id||'';}
-$('#connect-form button').disabled=!g.nodes.length;
+for(const p of DATA.people||[])addNode('c:'+p.name,p.name,'Creator');
+for(const h of DATA.honours||[])addNode(h.id,h.name,'Honour');
+function visibleGraph(){
+ const allowed=new Set();filtered().forEach(w=>['w:'+w.id,'c:'+w.creator,'p:'+w.place].forEach(id=>allowed.add(id)));
+ const q=$('#search').value.toLowerCase().trim();
+ if($('#region').value==='All'&&$('#era').value==='All')for(const p of DATA.people||[])if((state.medium==='All'||state.medium===p.medium)&&(!q||p.name.toLowerCase().includes(q)))allowed.add('c:'+p.name);
+ for(const e of edges)if(allowed.has(e.a)&&(e.label==='member of'||e.b.startsWith('h:')))allowed.add(e.b);
+ return{nodes:nodes.filter(n=>allowed.has(n.id)),edges:edges.filter(e=>allowed.has(e.a)&&allowed.has(e.b))};
 }
-function findPath(){const from=$('#from').value,to=$('#to').value,path=bfs(from,to,6);highlightPath=path||[];if(!path){$('#path-output').textContent='No documented path within six steps in the filtered starter collection. Try All works or a different pair.';renderGraph();return}state.focus=from;const label=id=>nodes.find(n=>n.id===id).label;$('#path-output').innerHTML=path.length===1?'Choose two different nodes to explore a connection.':`<strong>${path.length-1} documented step${path.length===2?'':'s'}</strong><ol>${path.slice(1).map((n,i)=>{const e=edges.find(e=>(e.a===path[i]&&e.b===n)||(e.b===path[i]&&e.a===n)),s=DATA.sources[e.source];return `<li>${esc(label(e.a))} <b>${esc(e.label)}</b> ${esc(label(e.b))}. <a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">Source ↗</a></li>`}).join('')}</ol>`;renderGraph();}
-function reset(){state.medium='All';$('#search').value='';$('#region').value='All';$('#era').value='All';$$('[data-medium]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.medium==='All')));highlightPath=[];$('#path-output').textContent='Choose two nodes to find a documented path.';render();fitMap();}
-function filterChanged(){highlightPath=[];$('#path-output').textContent='Filters changed. Choose two nodes to find a documented path.';render();fitMap();}
-document.addEventListener('click',e=>{const work=e.target.closest('[data-work]'),story=e.target.closest('[data-story]'),go=e.target.closest('[data-go]'),node=e.target.closest('[data-node]');if(work){selectWork(work.dataset.work);if(state.view==='stories')openStory(work.dataset.work)}if(story)openStory(story.dataset.story);if(go){$('#story-dialog').close();selectWork(go.dataset.id);setView(go.dataset.go)}if(node){state.focus=node.dataset.node;highlightPath=[];if(state.focus.startsWith('w:')){state.selected=state.focus.slice(2);render()}else renderGraph();$('#path-output').innerHTML=edges.filter(e=>e.a===state.focus||e.b===state.focus).map(e=>`<div>${esc(nodes.find(n=>n.id===e.a).label)} <b>${esc(e.label)}</b> ${esc(nodes.find(n=>n.id===e.b).label)} · <a href="${esc(DATA.sources[e.source].url)}" target="_blank" rel="noopener noreferrer">Source ↗</a></div>`).join('');}});
+function bfs(start,end,max=Infinity,graph=visibleGraph()){
+ const queue=[[start]],seen=new Set([start]);for(let i=0;i<queue.length;i++){const path=queue[i],last=path.at(-1);if(last===end)return path;if(path.length-1>=max)continue;for(const e of graph.edges){const n=e.a===last?e.b:e.b===last?e.a:null;if(n&&!seen.has(n)){seen.add(n);queue.push([...path,n])}}}return null;
+}
+function clearPath(){highlightPath=[];pathFrom='';pathTo='';$('#path-output').textContent='Select a node to set From, then choose a destination. Paths search the full filtered network.';}
+function focusNode(id){state.focus=id;clearPath();pulseNext=true;if(id.startsWith('w:'))state.selected=id.slice(2);renderGraph();const person=(DATA.people||[]).find(p=>'c:'+p.name===id);$('#path-output').innerHTML=(person?`<p>${esc(person.note)}</p>`:'')+visibleGraph().edges.filter(e=>e.a===id||e.b===id).map(edgeEvidence).join('');}
+function edgeEvidence(e){return `<div>${esc(nodes.find(n=>n.id===e.a).label)} <b>${esc(e.label)}</b> ${esc(nodes.find(n=>n.id===e.b).label)} · <a href="${esc(DATA.sources[e.source].url)}" target="_blank" rel="noopener noreferrer">Source ↗</a></div>`;}
+function renderGraph(){
+ const g=visibleGraph();if(!g.nodes.some(n=>n.id===state.focus))state.focus=g.nodes.find(n=>n.id==='w:'+state.selected)?.id||g.nodes[0]?.id;
+ const focus=g.nodes.find(n=>n.id===state.focus),dist=new Map();if(focus){dist.set(focus.id,0);const queue=[focus.id];for(let i=0;i<queue.length;i++)for(const e of g.edges){const n=e.a===queue[i]?e.b:e.b===queue[i]?e.a:null;if(n&&!dist.has(n)){dist.set(n,dist.get(queue[i])+1);queue.push(n)}}}
+ const max=Math.max(1,...dist.values());$('#hops').max=max;$('#hops').value=Math.min(Number($('#hops').value)||2,max);$('#hops').disabled=!focus;const depth=Number($('#hops').value);$('#depth-value').textContent=depth+' / '+max;
+ let shown=g.nodes.filter(n=>dist.has(n.id)&&dist.get(n.id)<=depth);if(highlightPath.length)shown=g.nodes.filter(n=>highlightPath.includes(n.id));
+ $('#graph-focus').textContent=focus?`${focus.label} · ${shown.length} of ${dist.size} connected nodes · ${g.nodes.length} in filtered collection`:'No matching connections. Reset filters to explore.';
+ const ids=new Set(shown.map(n=>n.id)),ge=g.edges.filter(e=>ids.has(e.a)&&ids.has(e.b)),pos={};
+ const width=Math.max(800,Math.ceil(Math.sqrt(shown.length))*120),height=Math.max(420,Math.ceil(Math.sqrt(shown.length))*90);$('#graph').setAttribute('viewBox',`0 0 ${width} ${height}`);$('#graph').style.minWidth=Math.min(width,900)+'px';$('#graph').style.height=height+'px';
+ shown.forEach((n,i)=>{const angle=i*2.399963,r=n.id===state.focus?0:60+Math.sqrt(i)*35;pos[n.id]=[width/2+Math.cos(angle)*r,height/2+Math.sin(angle)*r]});
+ for(let step=0;step<100;step++){const forces=Object.fromEntries(shown.map(n=>[n.id,[0,0]]));for(let i=0;i<shown.length;i++)for(let j=i+1;j<shown.length;j++){const a=shown[i].id,b=shown[j].id,dx=pos[a][0]-pos[b][0],dy=pos[a][1]-pos[b][1],r2=Math.max(25,dx*dx+dy*dy),k=1100/r2;forces[a][0]+=dx*k;forces[a][1]+=dy*k;forces[b][0]-=dx*k;forces[b][1]-=dy*k}for(const e of ge){const dx=pos[e.b][0]-pos[e.a][0],dy=pos[e.b][1]-pos[e.a][1];forces[e.a][0]+=dx*.012;forces[e.a][1]+=dy*.012;forces[e.b][0]-=dx*.012;forces[e.b][1]-=dy*.012}for(const n of shown)if(n.id!==state.focus){pos[n.id][0]=Math.max(65,Math.min(width-65,pos[n.id][0]+Math.max(-5,Math.min(5,forces[n.id][0]))));pos[n.id][1]=Math.max(35,Math.min(height-50,pos[n.id][1]+Math.max(-5,Math.min(5,forces[n.id][1]))));}}
+ $('#graph').classList.toggle('all-labels',$('#graph-labels').checked);
+ $('#graph').innerHTML=ge.map(e=>{const a=pos[e.a],b=pos[e.b];return `<line class="edge ${highlightPath.length?'selected':''}" x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}"><title>${esc(e.label)}</title></line>`}).join('')+shown.map(n=>{const [x,y]=pos[n.id],selected=n.id===state.focus,c={Creator:'#8bc8ad',Work:'#e5aa88',Place:'#8bbbd1',Honour:'#e5c573'}[n.type];return `<g class="node ${selected?'focused':''}" tabindex="0" role="button" aria-pressed="${selected}" aria-label="Explore ${esc(n.label)}" data-node="${esc(n.id)}" transform="translate(${x},${y})"><title>${esc(n.label)} · ${n.type}</title>${selected?`<circle class="focus-halo ${pulseNext?'pulse':''}" r="24"/>`:''}<circle r="${selected?16:9}" fill="${c}"/><text text-anchor="middle" y="${selected?43:29}">${esc(n.label)}</text></g>`}).join('');pulseNext=false;
+ const options=g.nodes.slice().sort((a,b)=>a.label.localeCompare(b.label)).map(n=>`<option value="${esc(n.id)}">${esc(n.label)} · ${n.type}</option>`).join('');
+ $('#explore-node').innerHTML=options;$('#explore-node').value=state.focus||'';
+ if(!g.nodes.some(n=>n.id===pathFrom))pathFrom=state.focus||'';if(!g.nodes.some(n=>n.id===pathTo))pathTo='';
+ $('#from').innerHTML=options;$('#from').value=pathFrom;$('#to').innerHTML='<option value="">Choose destination…</option>'+options;$('#to').value=pathTo;$('#connect-form button').disabled=!pathFrom||!pathTo;
+}
+function findPath(){pathFrom=$('#from').value;pathTo=$('#to').value;const path=bfs(pathFrom,pathTo);highlightPath=path||[];if(!path){$('#path-output').textContent='No documented path in the filtered collection. Try resetting filters or choosing another pair.';renderGraph();return}state.focus=pathFrom;$('#path-output').innerHTML=path.length===1?'Choose two different nodes.':`<strong>${path.length-1} documented steps</strong>`+path.slice(1).map((n,i)=>edgeEvidence(edges.find(e=>(e.a===path[i]&&e.b===n)||(e.b===path[i]&&e.a===n)))).join('');renderGraph();}
+function reset(){state.medium='All';$('#search').value='';$('#region').value='All';$('#era').value='All';$$('[data-medium]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.medium==='All')));state.focus='w:trinity-session';$('#hops').value=2;clearPath();render();fitMap();}
+function filterChanged(){clearPath();render();fitMap();}
+document.addEventListener('click',e=>{const work=e.target.closest('[data-work]'),story=e.target.closest('[data-story]'),go=e.target.closest('[data-go]'),node=e.target.closest('[data-node]');if(work){selectWork(work.dataset.work);if(state.view==='stories')openStory(work.dataset.work)}if(story)openStory(story.dataset.story);if(go){$('#story-dialog').close();selectWork(go.dataset.id);setView(go.dataset.go)}if(node)focusNode(node.dataset.node);});
 $('#graph').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.closest('[data-node]')){e.preventDefault();e.target.closest('[data-node]').dispatchEvent(new MouseEvent('click',{bubbles:true}))}});
 $$('.tab').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
 $('.tabs').addEventListener('keydown',e=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(e.key))return;e.preventDefault();const tabs=$$('.tab'),i=tabs.indexOf(document.activeElement);const next=e.key==='Home'?0:e.key==='End'?2:(i+(e.key==='ArrowRight'?1:2))%3;setView(tabs[next].dataset.view);tabs[next].focus()});
 $$('[data-medium]').forEach(b=>b.addEventListener('click',()=>{state.medium=b.dataset.medium;$$('[data-medium]').forEach(c=>c.setAttribute('aria-pressed',String(c===b)));filterChanged()}));
-$('#search').addEventListener('input',filterChanged);$('#region').addEventListener('change',filterChanged);$('#era').addEventListener('change',filterChanged);$('#reset').addEventListener('click',reset);$('#fit-map').addEventListener('click',fitMap);$('#hops').addEventListener('change',()=>{highlightPath=[];renderGraph()});$('#connect-form').addEventListener('submit',e=>{e.preventDefault();findPath()});$('#surprise').addEventListener('click',()=>{const a=filtered();if(a.length)openStory(a[Math.floor(Math.random()*a.length)].id)});$('#brand').addEventListener('click',e=>{e.preventDefault();reset();setView('map')});
+$('#search').addEventListener('input',filterChanged);$('#region').addEventListener('change',filterChanged);$('#era').addEventListener('change',filterChanged);$('#reset').addEventListener('click',reset);$('#fit-map').addEventListener('click',fitMap);$('#hops').addEventListener('input',()=>{clearPath();renderGraph()});$('#connect-form').addEventListener('submit',e=>{e.preventDefault();findPath()});$('#surprise').addEventListener('click',()=>{const a=filtered();if(a.length)openStory(a[Math.floor(Math.random()*a.length)].id)});$('#brand').addEventListener('click',e=>{e.preventDefault();reset();setView('map')});
 for(const id of ['about','method'])$('#'+id).addEventListener('click',()=>$('#about-dialog').showModal());$('#close-story').addEventListener('click',()=>$('#story-dialog').close());$('#close-about').addEventListener('click',()=>$('#about-dialog').close());$$('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}}));$('#download-data').addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(DATA,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='creativity-map-catalogue.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
 try{map=L.map('map',{zoomControl:false,scrollWheelZoom:false}).setView([43.70,-79.38],11);L.control.zoom({position:'topright'}).addTo(map);let success=false;L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).on('tileload',()=>{success=true;$('#map-error').hidden=true}).on('tileerror',()=>{if(!success)$('#map-error').hidden=false}).addTo(map);}catch(e){$('#map-error').hidden=false;}
+$('#explore-node').addEventListener('change',e=>focusNode(e.target.value));
+$('#all-links').addEventListener('click',()=>{clearPath();$('#hops').value=$('#hops').max;renderGraph()});
+$('#graph-home').addEventListener('click',()=>{state.focus='w:'+state.selected;$('#hops').value=2;clearPath();pulseNext=true;renderGraph()});
+$('#graph-labels').addEventListener('change',renderGraph);
+for(const id of ['from','to'])$('#'+id).addEventListener('change',()=>{pathFrom=$('#from').value;pathTo=$('#to').value;highlightPath=[];$('#path-output').textContent='Choose Find a path to see the evidence.';renderGraph()});
 render();
 </script></body></html>

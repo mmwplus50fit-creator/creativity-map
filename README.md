@@ -1,6 +1,6 @@
 # Creativity Map — Toronto & beyond
 
-Version 0.2.0. A static, public-facing cultural atlas prototype for Magnus's Social Activity project.
+Version 0.3.0. A static, public-facing cultural atlas prototype for Magnus's Social Activity project.
 
 ## Open the preview
 Open `index.html` in a modern browser. Application code, catalogue and Leaflet are embedded in that file. An internet connection is required for the OpenStreetMap background and external source pages. The story catalogue and network do not call an AI service, require accounts or use a database. No analytics are installed.
@@ -10,7 +10,7 @@ Open `index.html` in a modern browser. Application code, catalogue and Leaflet a
 - Seven approximate location markers. Five places are deliberately unpinned.
 - Map, Stories and Connections views; search, medium, region and period filters.
 - Story details with supporting sources and explicit location/date limitations.
-- One-, two-, three- and up-to-six-degree graph exploration and a shortest documented path finder.
+- Connection-depth slider up to the full connected component; shortest documented paths have no arbitrary six-step cap.
 - Catalogue download, plus CSV for import into a future Google Sheet. There is no live Sheets integration yet.
 
 ## Publish with GitHub Pages
@@ -21,7 +21,7 @@ Open `index.html` in a modern browser. Application code, catalogue and Leaflet a
 
 Repository: https://github.com/mmwplus50fit-creator/creativity-map
 
-Live site: https://mmwplus50fit-creator.github.io/creativity-map/
+Live site: https://creativity-map.bucketlistbooks.ca/
 
 GitHub Pages serves main at the repository root. Public access to version 0.1.0 was verified on 15 October 2026.
 
@@ -45,3 +45,12 @@ JavaScript syntax and automated DOM interaction checks passed: filters, searches
 
 ## Canadian expansion (0.2.0)
 Adds MacDonald and Lismer (Group of Seven), The Tragically Hip, Gord Downie, Alanis Morissette and Maestro Fresh Wes. Adds sourced group membership edges and 1990s/2000-onward filters. Alanis relies on a clearly labelled secondary source; the full RPM scan was inaccessible. The Bathouse pin represents Bath community, not the studio. MacDonald House uses an approximate heritage-marker location. Five sites remain unpinned.
+
+## Connections and honours (0.3.0, 23 October 2026)
+- Constellation-inspired dark connection field, small translucent nodes, hover/focus labels, optional all-label display and a selected-node halo. Pulse ends after three cycles and respects reduced-motion preferences.
+- Explore selector exposes every node in the filtered collection. Slider expands the selected connected component immediately, with counts and an Expand all button. Disconnected components remain accessible through the selector.
+- From follows node selection. Destination starts blank; endpoint changes clear old path results. Reset connections restores the selected work and clears endpoints. No path state is stored across sessions.
+- Four graph-only artist profiles: Norval Morrisseau, Kenojuak Ashevak, Alex Colville and Alex Janvier. Seven sourced honours edges, including existing Lismer and Downie, connect through Order of Canada and 2008 visual/media arts awards. Original 1967 Medal of Service designation is retained; later promotions are not asserted.
+- Shared awards are not evidence of acquaintance or collaboration. New profiles do not establish creation locations, add map pins, or inflate the 17-work count. Region and era filters exclude graph-only artists until suitable place/work evidence is added.
+- Sources checked 23 October 2026; official Governor General and Canada Council records linked per edge. Wikipedia artist list used only for discovery. Private BLB Constellation could not be inspected; this is an interpretation, not a reproduction.
+- Automated DOM checks cover slider expansion, selected-node/path reset, honours evidence, paths longer than six edges, empty/filter/reset behaviour, graph-only artist search and referential integrity. Visual desktop/iPhone review remains outstanding.
